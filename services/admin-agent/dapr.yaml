@@ -1,0 +1,22 @@
+apiVersion: dapr.io/v1alpha1
+kind: Configuration
+metadata:
+  name: admin-agent-config
+spec:
+  tracing:
+    samplingRate: "1"
+    zipkin:
+      endpointAddress: "http://localhost:9411/api/v2/spans"
+  logging:
+    level: info
+  features:
+    - name: "Workflow"
+      enabled: true
+  accessControl:
+    defaultAction: allow
+    trustDomain: "public"
+    policies:
+      - appId: admin-agent
+        defaultAction: allow
+        trustDomain: public
+        namespace: "default"

@@ -1,0 +1,108 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: admin-agent
+  labels:
+    app: admin-agent
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: admin-agent
+  template:
+    metadata:
+      labels:
+        app: admin-agent
+      annotations:
+        dapr.io/enabled: "true"
+        dapr.io/app-id: "admin-agent"
+        dapr.io/app-port: "8000"
+        dapr.io/config: "admin-agent-config"
+        dapr.io/enable-profiling: "true"
+        dapr.io/enable-metrics: "true"
+        dapr.io/metrics-port: "9090"
+        dapr.io/log-level: "info"
+    spec:
+      containers:
+      - name: admin-agent
+        image: admin-agent:latest
+        ports:
+        - containerPort: 8000
+          name: http
+        - containerPort: 9090
+          name: metrics
+        env:
+        - name: DATABASE_URL
+          valueFrom:
+            secretKeyRef:
+              name: admin-agent-secrets
+              key: database-url
+        - name: DEBUG
+          value: "false"
+        - name: DAPR_HTTP_PORT
+          value: "3500"
+        - name: DAPR_GRPC_PORT
+          value: "50001"
+        resources:
+          requests:
+            memory: "256Mi"
+            cpu: "250m"
+          limits:
+            memory: "512Mi"
+            cpu: "500m"
+        livenessProbe:
+          httpGet:
+            path: /health/live
+            port: 8000
+          initialDelaySeconds: 30
+          periodSeconds: 10
+        readinessProbe:
+          httpGet:
+            path: /health/ready
+            port: 8000
+          initialDelaySeconds: 5
+          periodSeconds: 5
+        volumeMounts:
+        - name: uploads
+          mountPath: /app/uploads
+      volumes:
+      - name: uploads
+        persistentVolumeClaim:
+          claimName: admin-agent-uploads
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: admin-agent-service
+  labels:
+    app: admin-agent
+spec:
+  selector:
+    app: admin-agent
+  ports:
+  - name: http
+    port: 80
+    targetPort: 8000
+  - name: metrics
+    port: 9090
+    targetPort: 9090
+  type: ClusterIP
+---
+apiVersion: v1
+kind: Secret
+metadata:
+  name: admin-agent-secrets
+type: Opaque
+stringData:
+  database-url: "postgresql+asyncpg://username:password@host:5432/compliance_sentinel"
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: admin-agent-uploads
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 10Gi

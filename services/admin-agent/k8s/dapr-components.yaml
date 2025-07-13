@@ -1,0 +1,91 @@
+apiVersion: dapr.io/v1alpha1
+kind: Component
+metadata:
+  name: statestore
+  namespace: default
+spec:
+  type: state.postgresql
+  version: v1
+  metadata:
+  - name: connectionString
+    secretKeyRef:
+      name: admin-agent-secrets
+      key: database-url
+  - name: tableName
+    value: "state"
+  - name: metadataTableName
+    value: "dapr_metadata"
+  - name: actorStateStore
+    value: "true"
+  - name: keyPrefix
+    value: "admin-agent"
+scopes:
+- admin-agent
+---
+apiVersion: dapr.io/v1alpha1
+kind: Component
+metadata:
+  name: pubsub
+  namespace: default
+spec:
+  type: pubsub.redis
+  version: v1
+  metadata:
+  - name: redisHost
+    value: "redis-service:6379"
+  - name: redisPassword
+    value: ""
+  - name: enableTLS
+    value: "false"
+  - name: maxRetries
+    value: "3"
+  - name: maxRetryBackoff
+    value: "2s"
+scopes:
+- admin-agent
+---
+apiVersion: dapr.io/v1alpha1
+kind: Component
+metadata:
+  name: workflow
+  namespace: default
+spec:
+  type: workflow.dapr
+  version: v1
+  metadata:
+  - name: workflowBackend
+    value: "actors"
+  - name: actorRemindersStoragePartitions
+    value: "0"
+scopes:
+- admin-agent
+---
+apiVersion: dapr.io/v1alpha1
+kind: Configuration
+metadata:
+  name: admin-agent-config
+  namespace: default
+spec:
+  tracing:
+    samplingRate: "1"
+    zipkin:
+      endpointAddress: "http://zipkin:9411/api/v2/spans"
+  logging:
+    level: info
+  features:
+    - name: "Workflow"
+      enabled: true
+    - name: "Agents"
+      enabled: true
+  httpPipeline:
+    handlers:
+      - name: cors
+        type: middleware.http.cors
+  accessControl:
+    defaultAction: allow
+    trustDomain: "public"
+    policies:
+      - appId: admin-agent
+        defaultAction: allow
+        trustDomain: public
+        namespace: "default"

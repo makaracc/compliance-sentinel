@@ -1,0 +1,13 @@
+{
+  "total_tests": 6,
+  "passed_tests": 4,
+  "success_rate": 66.66666666666666,
+  "results": {
+    "Dapr Health": false,
+    "Components Metadata": true,
+    "State Store": true,
+    "Pub/Sub": true,
+    "Workflow API": false,
+    "App through Dapr": true
+  }
+}

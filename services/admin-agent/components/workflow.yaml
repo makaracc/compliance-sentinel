@@ -1,0 +1,14 @@
+apiVersion: dapr.io/v1alpha1
+kind: Component
+metadata:
+  name: workflow
+spec:
+  type: workflow.dapr
+  version: v1
+  metadata:
+  - name: workflowBackend
+    value: "actors"
+  - name: actorRemindersStoragePartitions
+    value: "0"
+scopes:
+- admin-agent

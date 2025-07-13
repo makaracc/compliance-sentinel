@@ -1,0 +1,354 @@
+{
+  "total_tests": 6,
+  "passed_tests": 5,
+  "success_rate": 83.33333333333334,
+  "results": {
+    "compliance_matcher": {
+      "success": true,
+      "company_id": 1,
+      "agent": "compliance_matcher_agent",
+      "analysis": {
+        "company_id": 1,
+        "industry": "technology",
+        "location": "australia",
+        "applicable_frameworks": [
+          "ACSC",
+          "ISO27001",
+          "SOC2",
+          "Privacy Act",
+          "GDPR",
+          "APRA"
+        ],
+        "risk_level": "medium",
+        "mandatory_requirements": [
+          "GDPR"
+        ],
+        "recommended_requirements": [
+          "ACSC",
+          "ISO27001",
+          "SOC2",
+          "Privacy Act",
+          "APRA"
+        ],
+        "analysis_confidence": 1.0
+      },
+      "matched_requirements": [
+        {
+          "id": 3,
+          "name": "Security Audit",
+          "framework": "ISO27001",
+          "severity_level": "High",
+          "mandatory": false,
+          "estimated_duration_days": 75
+        },
+        {
+          "id": 1,
+          "name": "Data Protection Assessment",
+          "framework": "GDPR",
+          "severity_level": "High",
+          "mandatory": true,
+          "estimated_duration_days": 60
+        }
+      ],
+      "risk_assessment": {
+        "company_id": 1,
+        "overall_risk_score": 6,
+        "risk_level": "medium",
+        "risk_factors": [],
+        "mitigation_recommendations": [
+          "Allocate additional resources for compliance implementation"
+        ],
+        "priority_requirements": [
+          {
+            "name": "Data Protection Assessment",
+            "framework": "GDPR",
+            "severity": "High",
+            "estimated_days": 60
+          }
+        ],
+        "estimated_total_effort_days": 135
+      },
+      "summary": {
+        "total_requirements": 2,
+        "mandatory_requirements": 1,
+        "risk_level": "medium",
+        "estimated_effort_days": 135,
+        "priority_requirements_count": 1
+      },
+      "recommendations": {
+        "immediate_actions": [
+          "Review and approve compliance implementation plan",
+          "Allocate necessary resources for compliance activities",
+          "Establish compliance project timeline"
+        ],
+        "next_steps": [
+          "Begin with highest priority requirements",
+          "Set up regular compliance review meetings",
+          "Implement compliance tracking system"
+        ]
+      }
+    },
+    "step_generator": {
+      "success": true,
+      "company_compliance_id": "cc_1_1",
+      "framework": "GDPR",
+      "agent": "step_generator_agent",
+      "generated_steps": [
+        {
+          "step_number": 1,
+          "title": "Data Inventory and Mapping",
+          "description": "Identify and document all personal data processing activities",
+          "category": "assessment",
+          "complexity": "medium",
+          "base_hours": 16,
+          "required_skills": [
+            "data_analysis",
+            "process_mapping"
+          ],
+          "deliverables": [
+            "Data flow diagrams",
+            "Processing records",
+            "Data inventory"
+          ],
+          "estimated_duration_hours": 16,
+          "company_size_factor": 1.0,
+          "complexity_factor": 1.0,
+          "framework": "GDPR",
+          "company_id": 1,
+          "responsible_role": "Data Analyst",
+          "assigned_to": "data.analyst@company.com",
+          "supporting_roles": [
+            "Business Analyst"
+          ],
+          "team_size": 2,
+          "resource_allocation": {
+            "primary": "Data Analyst",
+            "supporting": [
+              "Business Analyst"
+            ],
+            "estimated_fte": 0.1
+          },
+          "start_date": "2025-07-13T04:12:27.742251+00:00",
+          "end_date": "2025-07-16T04:12:27.742251+00:00",
+          "estimated_days": 2,
+          "buffer_days": 1,
+          "total_allocated_days": 3,
+          "timeline_risk": "high"
+        },
+        {
+          "step_number": 2,
+          "title": "Privacy Impact Assessment",
+          "description": "Conduct privacy impact assessment for high-risk processing",
+          "category": "assessment",
+          "complexity": "high",
+          "base_hours": 24,
+          "required_skills": [
+            "legal_analysis",
+            "risk_assessment"
+          ],
+          "deliverables": [
+            "PIA report",
+            "Risk assessment",
+            "Mitigation measures"
+          ],
+          "estimated_duration_hours": 33,
+          "company_size_factor": 1.0,
+          "complexity_factor": 1.4,
+          "framework": "GDPR",
+          "company_id": 1,
+          "responsible_role": "Legal Counsel",
+          "assigned_to": "legal@company.com",
+          "supporting_roles": [
+            "Risk Manager"
+          ],
+          "team_size": 2,
+          "resource_allocation": {
+            "primary": "Legal Counsel",
+            "supporting": [
+              "Risk Manager"
+            ],
+            "estimated_fte": 0.21
+          },
+          "start_date": "2025-07-17T04:12:27.742251+00:00",
+          "end_date": "2025-07-23T04:12:27.742251+00:00",
+          "estimated_days": 5,
+          "buffer_days": 1,
+          "total_allocated_days": 6,
+          "timeline_risk": "high"
+        },
+        {
+          "step_number": 3,
+          "title": "Consent Management Review",
+          "description": "Review and update consent mechanisms and privacy notices",
+          "category": "implementation",
+          "complexity": "medium",
+          "base_hours": 12,
+          "required_skills": [
+            "legal_writing",
+            "ux_design"
+          ],
+          "deliverables": [
+            "Updated privacy policy",
+            "Consent forms",
+            "Opt-out mechanisms"
+          ],
+          "estimated_duration_hours": 12,
+          "company_size_factor": 1.0,
+          "complexity_factor": 1.0,
+          "framework": "GDPR",
+          "company_id": 1,
+          "responsible_role": "Legal Counsel",
+          "assigned_to": "legal@company.com",
+          "supporting_roles": [
+            "UX Designer"
+          ],
+          "team_size": 2,
+          "resource_allocation": {
+            "primary": "Legal Counsel",
+            "supporting": [
+              "UX Designer"
+            ],
+            "estimated_fte": 0.07
+          },
+          "start_date": "2025-07-17T04:12:27.742251+00:00",
+          "end_date": "2025-07-20T04:12:27.742251+00:00",
+          "estimated_days": 2,
+          "buffer_days": 1,
+          "total_allocated_days": 3,
+          "timeline_risk": "high"
+        },
+        {
+          "step_number": 4,
+          "title": "Data Subject Rights Implementation",
+          "description": "Implement processes for handling data subject requests",
+          "category": "implementation",
+          "complexity": "high",
+          "base_hours": 20,
+          "required_skills": [
+            "process_design",
+            "system_integration"
+          ],
+          "deliverables": [
+            "Request procedures",
+            "Response templates",
+            "Tracking system"
+          ],
+          "estimated_duration_hours": 28,
+          "company_size_factor": 1.0,
+          "complexity_factor": 1.4,
+          "framework": "GDPR",
+          "company_id": 1,
+          "responsible_role": "Business Analyst",
+          "assigned_to": "business.analyst@company.com",
+          "supporting_roles": [
+            "IT Architect"
+          ],
+          "team_size": 2,
+          "resource_allocation": {
+            "primary": "Business Analyst",
+            "supporting": [
+              "IT Architect"
+            ],
+            "estimated_fte": 0.17
+          },
+          "start_date": "2025-07-17T04:12:27.742251+00:00",
+          "end_date": "2025-07-22T04:12:27.742251+00:00",
+          "estimated_days": 4,
+          "buffer_days": 1,
+          "total_allocated_days": 5,
+          "timeline_risk": "high"
+        }
+      ],
+      "summary": {
+        "total_steps": 4,
+        "total_estimated_hours": 89,
+        "total_allocated_days": 17,
+        "unique_roles_required": 3,
+        "complexity_distribution": {
+          "high": 2,
+          "medium": 2,
+          "low": 0
+        },
+        "category_distribution": {
+          "assessment": 2,
+          "implementation": 2
+        }
+      },
+      "recommendations": [
+        "Review resource assignments and adjust based on team availability",
+        "Consider parallel execution where possible to optimize timeline",
+        "Establish regular checkpoint meetings to monitor progress",
+        "Prepare necessary tools and templates before step execution"
+      ]
+    },
+    "progress_monitor": {
+      "company_id": 1,
+      "overall_completion": 65.5,
+      "total_requirements": 3,
+      "completed_requirements": 1,
+      "in_progress_requirements": 2,
+      "total_steps": 12,
+      "completed_steps": 8,
+      "in_progress_steps": 3,
+      "pending_steps": 1,
+      "overdue_steps": 2,
+      "performance_metrics": {
+        "average_step_completion_time": 12.5,
+        "completion_velocity": 0.8,
+        "quality_score": 87.3
+      },
+      "bottlenecks": [
+        {
+          "type": "overdue_steps",
+          "severity": "high",
+          "count": 2,
+          "description": "2 steps are overdue"
+        }
+      ],
+      "alerts": []
+    },
+    "evidence_validator": {
+      "step_id": "ccs_1_1",
+      "file_path": "/uploads/evidence/test_document.pdf",
+      "validation_status": "valid",
+      "quality_score": 85,
+      "checks": [
+        {
+          "check": "File format",
+          "status": "passed"
+        },
+        {
+          "check": "Content completeness",
+          "status": "passed"
+        },
+        {
+          "check": "Quality assessment",
+          "status": "warning"
+        }
+      ],
+      "is_acceptable": true,
+      "recommendations": [
+        "Add more detailed analysis"
+      ]
+    },
+    "notification": {
+      "success": true,
+      "notification_type": "step_completed",
+      "priority": "high",
+      "channels_used": 2,
+      "notifications": [
+        {
+          "channel": "email",
+          "status": "sent",
+          "timestamp": "2025-07-13T04:12:27.743135"
+        },
+        {
+          "channel": "slack",
+          "status": "sent",
+          "timestamp": "2025-07-13T04:12:27.743139"
+        }
+      ]
+    },
+    "collaboration": null
+  }
+}

@@ -1,0 +1,2 @@
+# CORS component removed - using FastAPI CORS middleware instead
+# This component was causing initialization issues with Dapr 1.15.6

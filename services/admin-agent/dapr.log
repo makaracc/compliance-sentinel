@@ -1,0 +1,85 @@
+ℹ️  Starting Dapr with id admin-agent. HTTP Port: 3500. gRPC Port: 50001
+Flag --components-path has been deprecated, use --resources-path
+time="2025-07-13T04:19:47.888400311Z" level=info msg="Starting Dapr Runtime -- version 1.15.6 -- commit 77460fad2b0705fcb097bf54df6c19c2c67ff03e" app_id=admin-agent instance=codespaces-79da9c scope=dapr.runtime type=log ver=1.15.6
+time="2025-07-13T04:19:47.888438462Z" level=info msg="Log level set to: info" app_id=admin-agent instance=codespaces-79da9c scope=dapr.runtime type=log ver=1.15.6
+time="2025-07-13T04:19:47.888853927Z" level=warning msg="mTLS is disabled. Skipping certificate request and tls validation" app_id=admin-agent instance=codespaces-79da9c scope=dapr.runtime.security type=log ver=1.15.6
+time="2025-07-13T04:19:47.889401017Z" level=info msg="Enabled features: SchedulerReminders" app_id=admin-agent instance=codespaces-79da9c scope=dapr.runtime type=log ver=1.15.6
+time="2025-07-13T04:19:47.889524748Z" level=info msg="metric spec: {\"enabled\":true}" app_id=admin-agent instance=codespaces-79da9c scope=dapr.runtime.diagnostics type=log ver=1.15.6
+time="2025-07-13T04:19:47.889590079Z" level=info msg="Using default latency distribution buckets: [1 2 3 4 5 6 8 10 13 16 20 25 30 40 50 65 80 100 130 160 200 250 300 400 500 650 800 1000 2000 5000 10000 20000 50000 100000]" app_id=admin-agent instance=codespaces-79da9c scope=dapr.runtime.diagnostics type=log ver=1.15.6
+time="2025-07-13T04:19:47.889770185Z" level=warning msg="The default value for 'spec.metric.http.increasedCardinality' will change to 'false' in Dapr 1.15 or later" app_id=admin-agent instance=codespaces-79da9c scope=dapr.runtime.diagnostics type=log ver=1.15.6
+time="2025-07-13T04:19:47.89041133Z" level=info msg="standalone mode configured" app_id=admin-agent instance=codespaces-79da9c scope=dapr.runtime type=log ver=1.15.6
+time="2025-07-13T04:19:47.890465522Z" level=info msg="app id: admin-agent" app_id=admin-agent instance=codespaces-79da9c scope=dapr.runtime type=log ver=1.15.6
+time="2025-07-13T04:19:47.890581147Z" level=info msg="Dapr trace sampler initialized: ParentBased{root:AlwaysOnSampler,remoteParentSampled:AlwaysOnSampler,remoteParentNotSampled:AlwaysOffSampler,localParentSampled:AlwaysOnSampler,localParentNotSampled:AlwaysOffSampler}" app_id=admin-agent instance=codespaces-79da9c scope=dapr.runtime type=log ver=1.15.6
+time="2025-07-13T04:19:47.890728031Z" level=info msg="metrics server started on 0.0.0.0:36849/" app_id=admin-agent instance=codespaces-79da9c scope=dapr.runtime type=log ver=1.15.6
+time="2025-07-13T04:19:47.891256456Z" level=info msg="local service entry announced: admin-agent -> 10.0.0.123:45609" app_id=admin-agent component="nr (mdns/v1)" instance=codespaces-79da9c scope=dapr.contrib type=log ver=1.15.6
+time="2025-07-13T04:19:47.891486235Z" level=info msg="Initialized name resolution to mdns" app_id=admin-agent instance=codespaces-79da9c scope=dapr.runtime type=log ver=1.15.6
+time="2025-07-13T04:19:47.891684414Z" level=info msg="Loading components…" app_id=admin-agent instance=codespaces-79da9c scope=dapr.runtime type=log ver=1.15.6
+time="2025-07-13T04:19:47.894705297Z" level=info msg="Connected and received scheduler hosts addresses: [localhost:50006]" app_id=admin-agent instance=codespaces-79da9c scope=dapr.runtime.scheduler.watchhosts type=log ver=1.15.6
+time="2025-07-13T04:19:47.895261684Z" level=info msg="Component loaded: pubsub (pubsub.redis/v1)" app_id=admin-agent instance=codespaces-79da9c scope=dapr.runtime.processor type=log ver=1.15.6
+time="2025-07-13T04:19:47.895387749Z" level=info msg="Scheduler client initialized for address: localhost:50006" app_id=admin-agent instance=codespaces-79da9c scope=dapr.runtime.scheduler.clients type=log ver=1.15.6
+time="2025-07-13T04:19:47.895725669Z" level=info msg="Scheduler clients initialized" app_id=admin-agent instance=codespaces-79da9c scope=dapr.runtime.scheduler.clients type=log ver=1.15.6
+time="2025-07-13T04:19:47.896143009Z" level=info msg="Waiting for all outstanding components to be processed…" app_id=admin-agent instance=codespaces-79da9c scope=dapr.runtime type=log ver=1.15.6
+time="2025-07-13T04:19:47.899592809Z" level=info msg="Using 'statestore' as actor state store" app_id=admin-agent instance=codespaces-79da9c scope=dapr.runtime.processor.state type=log ver=1.15.6
+time="2025-07-13T04:19:47.899639717Z" level=info msg="Component loaded: statestore (state.redis/v1)" app_id=admin-agent instance=codespaces-79da9c scope=dapr.runtime.processor type=log ver=1.15.6
+time="2025-07-13T04:19:47.899659624Z" level=info msg="All outstanding components processed" app_id=admin-agent instance=codespaces-79da9c scope=dapr.runtime type=log ver=1.15.6
+time="2025-07-13T04:19:47.899681204Z" level=info msg="Loading endpoints…" app_id=admin-agent instance=codespaces-79da9c scope=dapr.runtime type=log ver=1.15.6
+time="2025-07-13T04:19:47.899994929Z" level=info msg="Waiting for all outstanding http endpoints to be processed…" app_id=admin-agent instance=codespaces-79da9c scope=dapr.runtime type=log ver=1.15.6
+time="2025-07-13T04:19:47.900121235Z" level=info msg="All outstanding http endpoints processed" app_id=admin-agent instance=codespaces-79da9c scope=dapr.runtime type=log ver=1.15.6
+time="2025-07-13T04:19:47.900165637Z" level=info msg="Loading Declarative Subscriptions…" app_id=admin-agent instance=codespaces-79da9c scope=dapr.runtime type=log ver=1.15.6
+time="2025-07-13T04:19:47.900597232Z" level=info msg="gRPC server listening on TCP address: :50001" app_id=admin-agent instance=codespaces-79da9c scope=dapr.runtime.grpc.api type=log ver=1.15.6
+time="2025-07-13T04:19:47.900643929Z" level=info msg="Enabled gRPC tracing middleware" app_id=admin-agent instance=codespaces-79da9c scope=dapr.runtime.grpc.api type=log ver=1.15.6
+time="2025-07-13T04:19:47.90067102Z" level=info msg="Enabled gRPC metrics middleware" app_id=admin-agent instance=codespaces-79da9c scope=dapr.runtime.grpc.api type=log ver=1.15.6
+time="2025-07-13T04:19:47.900763813Z" level=info msg="Registering workflow engine for gRPC endpoint: [::]:50001" app_id=admin-agent instance=codespaces-79da9c scope=dapr.runtime.grpc.api type=log ver=1.15.6
+time="2025-07-13T04:19:47.900836759Z" level=info msg="API gRPC server is running on port 50001" app_id=admin-agent instance=codespaces-79da9c scope=dapr.runtime type=log ver=1.15.6
+time="2025-07-13T04:19:47.900964959Z" level=warning msg="The default value for 'spec.metric.http.increasedCardinality' will change to 'false' in Dapr 1.15 or later" app_id=admin-agent instance=codespaces-79da9c scope=dapr.runtime.http type=log ver=1.15.6
+time="2025-07-13T04:19:47.901044227Z" level=info msg="Enabled max body size HTTP middleware with size 4194304 bytes" app_id=admin-agent instance=codespaces-79da9c scope=dapr.runtime.http type=log ver=1.15.6
+time="2025-07-13T04:19:47.901066318Z" level=info msg="Enabled tracing HTTP middleware" app_id=admin-agent instance=codespaces-79da9c scope=dapr.runtime.http type=log ver=1.15.6
+time="2025-07-13T04:19:47.901086857Z" level=info msg="Enabled metrics HTTP middleware" app_id=admin-agent instance=codespaces-79da9c scope=dapr.runtime.http type=log ver=1.15.6
+time="2025-07-13T04:19:47.901362972Z" level=info msg="HTTP server listening on TCP address: :3500" app_id=admin-agent instance=codespaces-79da9c scope=dapr.runtime.http type=log ver=1.15.6
+time="2025-07-13T04:19:47.901402325Z" level=info msg="HTTP server is running on port 3500" app_id=admin-agent instance=codespaces-79da9c scope=dapr.runtime type=log ver=1.15.6
+time="2025-07-13T04:19:47.901423334Z" level=info msg="The request body size parameter is: 4194304 bytes" app_id=admin-agent instance=codespaces-79da9c scope=dapr.runtime type=log ver=1.15.6
+time="2025-07-13T04:19:47.901474119Z" level=info msg="gRPC server listening on TCP address: :45609" app_id=admin-agent instance=codespaces-79da9c scope=dapr.runtime.grpc.internal type=log ver=1.15.6
+time="2025-07-13T04:19:47.901500057Z" level=info msg="Enabled gRPC tracing middleware" app_id=admin-agent instance=codespaces-79da9c scope=dapr.runtime.grpc.internal type=log ver=1.15.6
+time="2025-07-13T04:19:47.901520936Z" level=info msg="Enabled gRPC metrics middleware" app_id=admin-agent instance=codespaces-79da9c scope=dapr.runtime.grpc.internal type=log ver=1.15.6
+time="2025-07-13T04:19:47.901563856Z" level=info msg="Internal gRPC server is running on :45609" app_id=admin-agent instance=codespaces-79da9c scope=dapr.runtime type=log ver=1.15.6
+time="2025-07-13T04:19:47.901655677Z" level=info msg="Using Scheduler service for reminders." app_id=admin-agent instance=codespaces-79da9c scope=dapr.runtime.actor.reminders.scheduler type=log ver=1.15.6
+time="2025-07-13T04:19:47.901713044Z" level=info msg="application protocol: http. waiting on port 8000.  This will block until the app is listening on that port." app_id=admin-agent instance=codespaces-79da9c scope=dapr.runtime type=log ver=1.15.6
+time="2025-07-13T04:19:47.901815656Z" level=info msg="Actor runtime started" app_id=admin-agent instance=codespaces-79da9c scope=dapr.runtime.actor type=log ver=1.15.6
+time="2025-07-13T04:19:47.901843347Z" level=warning msg="Graceful shutdown timeout is infinite, will wait indefinitely to shutdown" app_id=admin-agent instance=codespaces-79da9c scope=dapr.runtime.actor type=log ver=1.15.6
+time="2025-07-13T04:19:47.901926953Z" level=info msg="worker started with backend dapr.actors/v1" app_id=admin-agent instance=codespaces-79da9c scope=dapr.wfengine.durabletask.backend type=log ver=1.15.6
+time="2025-07-13T04:19:47.901980383Z" level=info msg="Workflow engine started" app_id=admin-agent instance=codespaces-79da9c scope=dapr.runtime.wfengine type=log ver=1.15.6
+== APP == INFO:     Started server process [313134]
+== APP == INFO:     Waiting for application startup.
+== APP == INFO:     Application startup complete.
+== APP == INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+time="2025-07-13T04:19:48.405007221Z" level=info msg="application discovered on port 8000" app_id=admin-agent instance=codespaces-79da9c scope=dapr.runtime type=log ver=1.15.6
+== APP == 🚀 Starting Admin Agent Microservice (Test Mode)...
+== APP == 📖 Swagger Documentation: http://localhost:8000/docs
+== APP == 🔍 Health Check: http://localhost:8000/health/
+== APP == 📋 Test Tasks: http://localhost:8000/api/tasks/
+== APP == ============================================================
+== APP == INFO:     127.0.0.1:47796 - "GET /dapr/config HTTP/1.1" 404 Not Found
+time="2025-07-13T04:19:48.406076454Z" level=info msg="Application configuration loaded" app_id=admin-agent instance=codespaces-79da9c scope=dapr.runtime type=log ver=1.15.6
+== APP == INFO:     127.0.0.1:47796 - "GET /dapr/subscribe HTTP/1.1" 404 Not Found
+time="2025-07-13T04:19:48.406522928Z" level=info msg="Registering hosted actors: []" app_id=admin-agent instance=codespaces-79da9c scope=dapr.runtime.actor type=log ver=1.15.6
+time="2025-07-13T04:19:48.406554777Z" level=info msg="dapr initialized. Status: Running. Init Elapsed 516ms" app_id=admin-agent instance=codespaces-79da9c scope=dapr.runtime type=log ver=1.15.6
+time="2025-07-13T04:19:48.406683225Z" level=info msg="Reporting actor types: []" app_id=admin-agent instance=codespaces-79da9c scope=dapr.runtime.actors.placement type=log ver=1.15.6
+time="2025-07-13T04:19:48.406830462Z" level=info msg="Scheduler stream connected for [JOB_TARGET_TYPE_JOB]" app_id=admin-agent instance=codespaces-79da9c scope=dapr.runtime.scheduler.cluster type=log ver=1.15.6
+time="2025-07-13T04:19:48.406915274Z" level=info msg="Connected to placement localhost:50005" app_id=admin-agent instance=codespaces-79da9c scope=dapr.runtime.actors.placement.client.connector.static type=log ver=1.15.6
+time="2025-07-13T04:19:48.407716844Z" level=info msg="Connected to placement localhost:50005" app_id=admin-agent instance=codespaces-79da9c scope=dapr.runtime.actors.placement.client type=log ver=1.15.6
+time="2025-07-13T04:19:48.40844133Z" level=info msg="Placement tables updated, version: 0" app_id=admin-agent instance=codespaces-79da9c scope=dapr.runtime.actors.placement type=log ver=1.15.6
+time="2025-07-13T04:19:48.408506101Z" level=info msg="Running actor reminder migration from state store to scheduler" app_id=admin-agent instance=codespaces-79da9c scope=dapr.runtime.actors.reminders.migration type=log ver=1.15.6
+time="2025-07-13T04:19:48.408541697Z" level=info msg="Skipping migration, no missing scheduler reminders found" app_id=admin-agent instance=codespaces-79da9c scope=dapr.runtime.actors.reminders.migration type=log ver=1.15.6
+time="2025-07-13T04:19:48.408560051Z" level=info msg="Found 0 missing scheduler reminders from state store" app_id=admin-agent instance=codespaces-79da9c scope=dapr.runtime.actors.reminders.migration type=log ver=1.15.6
+time="2025-07-13T04:19:48.408569329Z" level=info msg="Migrated 0 reminders from state store to scheduler successfully" app_id=admin-agent instance=codespaces-79da9c scope=dapr.runtime.actors.reminders.migration type=log ver=1.15.6
+ℹ️  Updating metadata for appPID: 313134
+ℹ️  Updating metadata for app command: python test_simple.py
+✅  You're up and running! Both Dapr and your app logs will appear here.
+
+== APP == INFO:     127.0.0.1:53568 - "GET /health/ HTTP/1.1" 200 OK
+== APP == INFO:     127.0.0.1:39256 - "POST /api/workflows/start HTTP/1.1" 404 Not Found
+== APP == INFO:     127.0.0.1:39258 - "GET /health/ HTTP/1.1" 200 OK
+== APP == INFO:     127.0.0.1:39258 - "GET /api/tasks/ HTTP/1.1" 200 OK
+== APP == INFO:     127.0.0.1:39266 - "GET / HTTP/1.1" 200 OK
+== APP == INFO:     127.0.0.1:60346 - "GET /docs HTTP/1.1" 200 OK
+== APP == INFO:     127.0.0.1:60346 - "GET /openapi.json HTTP/1.1" 200 OK
